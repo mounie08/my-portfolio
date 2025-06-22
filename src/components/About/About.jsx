@@ -7,77 +7,72 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
+      className="bg-white text-black py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
     >
       <div className="flex flex-col-reverse md:flex-row justify-between items-center">
         {/* Left Side */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
-          {/* Greeting */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
+          <h1 className="text-4xl sm:text-5xl font-extrabold mb-2 leading-tight">
             Hi, I am
           </h1>
-          {/* Name */}
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
-            Tarun Kaushik
+
+          <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 leading-tight bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+            Lakshmi Mounika Veerapaneni
           </h2>
-          {/* Skills Heading with Typing Effect */}
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
-            <span className="text-white">I am a </span>
-            <ReactTypingEffect
-              text={[
-                'Fullstack Developer',
-                'App Developer',
-                'UI/UX Designer',
-                'Coder',
-              ]}
-              speed={100}
-              eraseSpeed={50}
-              typingDelay={500}
-              eraseDelay={2000}
-              cursorRenderer={(cursor) => (
-                <span className="text-[#8245ec]">{cursor}</span>
-              )}
-            />
+
+          <h3 className="text-2xl sm:text-3xl font-semibold mb-4 leading-tight text-[#8245ec]">
+            I am a{' '}
+            <span className="text-[#a855f7]">
+              <ReactTypingEffect
+                text={['Python Developer', 'DevOps Engineer', 'System Engineer']}
+                speed={80}
+                eraseSpeed={40}
+                typingDelay={500}
+                eraseDelay={1800}
+                cursorRenderer={(cursor) => (
+                  <span className="text-[#a855f7]">{cursor}</span>
+                )}
+              />
+            </span>
           </h3>
-          {/* About Me Paragraph */}
-          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            I am a full-stack developer with over 2 years of experience in
-            building scalable web applications. Skilled in both front-end and
-            back-end development, I specialize in the MERN stack and other
-            modern technologies to create seamless user experiences and
-            efficient solutions.
+
+          <p className="text-base text-gray-700 mt-8 mb-10 leading-relaxed text-justify tracking-wide">
+            I'm a DevOps Engineer with 3+ years of experience designing robust CI/CD pipelines using Jenkins, GitLab CI/CD, and CircleCI. I specialize in Docker & Kubernetes-based containerization for scalable deployments. My Git expertise ensures seamless team collaboration. My focus is on delivering secure, automated, and resilient infrastructure.
           </p>
-          {/* Resume Button */}
+
           <a
-            href="https://drive.google.com/file/d/1_pLl2wjYVCU-wnqXIhjhYr0YC0SJXvwv/view?usp=sharing"
+            href="https://drive.google.com/file/d/11Smlpf60CceK1KRz8ezZB3RsVBbOnO5n/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
+            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-base font-semibold transition duration-300 bg-gradient-to-r from-purple-600 to-fuchsia-500 hover:from-purple-700 hover:to-fuchsia-600 shadow-md"
             style={{
               background: 'linear-gradient(90deg, #8245ec, #a855f7)',
-              boxShadow: '0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec',
+              boxShadow: '0 0 2px #8245ec, 0 0 4px #a855f7, 0 0 30px #8245ec',
             }}
           >
             DOWNLOAD CV
           </a>
-          
         </div>
+
         {/* Right Side */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full"
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
             perspective={1000}
             scale={1.05}
             transitionSpeed={1000}
             gyroscope={true}
+            className="relative group"
           >
-            <img
-              src={profileImage}
-              alt="Tarun Kaushik"
-              className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
-            />
+            <div className="relative w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80 rounded-full p-1 bg-black group-hover:scale-105 transition-transform duration-300 ease-in-out shadow-[0_0_20px_5px_rgba(130,69,236,0.6)]">
+              <div className="absolute inset-0 z-0 rounded-full animate-pulse bg-gradient-to-tr from-purple-600 via-fuchsia-500 to-pink-500 blur-lg opacity-70 group-hover:opacity-100 transition-all duration-500"></div>
+              <img
+                src={profileImage}
+                alt="Lakshmi Mounika"
+                className="relative z-10 w-full h-full rounded-full object-cover border-[5px] border-black"
+              />
+            </div>
           </Tilt>
         </div>
       </div>
