@@ -6,7 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-
+import Intro from "./components/Intro";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
@@ -14,9 +14,10 @@ import Experience from "./components/Experience/Experience";
 import Work from "./components/Work/Work";
 import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
+import Certifications from "./components/Certifications/Certification";
 import Footer from "./components/Footer/Footer";
 import PageWrapper from "./components/PageWrapper";
-import Intro from "./components/Intro"; // This is your name screen
+ // This is your name screen
 
 const FullPortfolio = () => (
   <PageWrapper>
@@ -26,6 +27,7 @@ const FullPortfolio = () => (
     <Experience />
     <Work />
     <Education />
+    <Certifications />
     <Contact />
     <Footer />
   </PageWrapper>

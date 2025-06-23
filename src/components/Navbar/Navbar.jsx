@@ -31,6 +31,8 @@ const Navbar = () => {
     { id: "experience", label: "Experience" },
     { id: "work", label: "Projects" },
     { id: "education", label: "Education" },
+    { id: "certifications", label: "Certifications" },
+
   ];
 
   return (
@@ -66,7 +68,7 @@ const Navbar = () => {
         </ul>
 
         {/* Social Icons */}
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden md:flex space-x-4 ml-6">
           <a
             href="https://github.com/mounie08"
             target="_blank"
